@@ -1,0 +1,47 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\Debug\ок.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ок.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ок.map</FILE>
+  <FILE>ок.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>5</LINE></start>
+  <a><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>22</LINE></a>
+  <b><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>28</LINE></b>
+  <checkr21><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>25</LINE></checkr21>
+  <c><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>32</LINE></c>
+  <vkl3><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>39</LINE></vkl3>
+  <vkl4><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>57</LINE></vkl4>
+  <next><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>41</LINE></next>
+  <next1><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>43</LINE></next1>
+  <next2><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>45</LINE></next2>
+  <next3><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>47</LINE></next3>
+  <next4><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>49</LINE></next4>
+  <next5><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>51</LINE></next5>
+  <next6><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>53</LINE></next6>
+  <mnext><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>59</LINE></mnext>
+  <mnext1><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>61</LINE></mnext1>
+  <mnext2><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>63</LINE></mnext2>
+  <mnext3><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>65</LINE></mnext3>
+  <mnext4><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>67</LINE></mnext4>
+  <mnext5><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>69</LINE></mnext5>
+  <mnext6><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>71</LINE></mnext6>
+ </LABELS>
+</ASSEMBLER_INFO>
