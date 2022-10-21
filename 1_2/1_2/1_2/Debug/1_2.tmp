@@ -1,0 +1,32 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\Debug\1_2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>1_2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>1_2.map</FILE>
+  <FILE>1_2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <loop><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</FILE><LINE>21</LINE></loop>
+  <up><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</FILE><LINE>27</LINE></up>
+  <down><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</FILE><LINE>39</LINE></down>
+  <delay_20000mks><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</FILE><LINE>51</LINE></delay_20000mks>
+  <init_delay><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</FILE><LINE>59</LINE></init_delay>
+  <test_TIFR><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_2\1_2\1_2\1_2.asm</FILE><LINE>62</LINE></test_TIFR>
+ </LABELS>
+</ASSEMBLER_INFO>

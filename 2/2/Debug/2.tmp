@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>Z:\Projects\ASMProjects_ATMEGA16\2\2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\Debug\2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>2.map</FILE>
+  <FILE>2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INIT><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>15</LINE></INIT>
+  <WAIT_5ms><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>251</LINE></WAIT_5ms>
+  <RETRY><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>191</LINE></RETRY>
+  <OKE><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>198</LINE></OKE>
+  <OKE1><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>211</LINE></OKE1>
+  <LOOP><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>187</LINE></LOOP>
+  <WAIT_20ms><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>225</LINE></WAIT_20ms>
+  <WGLOOP01><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>232</LINE></WGLOOP01>
+  <WGLOOP11><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>233</LINE></WGLOOP11>
+  <WGLOOP21><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>240</LINE></WGLOOP21>
+  <WGLOOP02><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>258</LINE></WGLOOP02>
+  <WGLOOP12><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>259</LINE></WGLOOP12>
+  <WAIT_100us><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>271</LINE></WAIT_100us>
+  <WGLOOP03><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>278</LINE></WGLOOP03>
+  <WGLOOP13><FILE>Z:\Projects\ASMProjects_ATMEGA16\2\2\main.asm</FILE><LINE>279</LINE></WGLOOP13>
+ </LABELS>
+</ASSEMBLER_INFO>

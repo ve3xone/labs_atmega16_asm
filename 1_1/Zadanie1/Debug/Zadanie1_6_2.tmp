@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>Z:\Projects\ASMProjects_ATMEGA16\1_1\Zadanie1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>Z:\Projects\ASMProjects_ATMEGA16\1_1\Zadanie1\Zadanie1.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\1_1\Zadanie1\Debug/Zadanie1_6_2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Zadanie1_6_2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Zadanie1_6_2.map</FILE>
+  <FILE>Zadanie1_6_2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <loop><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_1\Zadanie1\Zadanie1.asm</FILE><LINE>36</LINE></loop>
+  <delay10ms><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_1\Zadanie1\Zadanie1.asm</FILE><LINE>42</LINE></delay10ms>
+  <iLoop><FILE>Z:\Projects\ASMProjects_ATMEGA16\1_1\Zadanie1\Zadanie1.asm</FILE><LINE>45</LINE></iLoop>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,39 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\Debug\ок.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ок.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ок.map</FILE>
+  <FILE>ок.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>22</LINE></start>
+  <irq0><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>48</LINE></irq0>
+  <ADC_complete><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>53</LINE></ADC_complete>
+  <a><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>44</LINE></a>
+  <vkl2><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>75</LINE></vkl2>
+  <okexitcomlite><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>50</LINE></okexitcomlite>
+  <vkl><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>62</LINE></vkl>
+  <lvkl><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>70</LINE></lvkl>
+  <OK2><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>90</LINE></OK2>
+  <vkl3><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>96</LINE></vkl3>
+  <vklexit><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>67</LINE></vklexit>
+  <OK><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>84</LINE></OK>
+  <okexit><FILE>Z:\Projects\ASMProjects_ATMEGA16\4_3\ок\ок\ок.asm</FILE><LINE>81</LINE></okexit>
+ </LABELS>
+</ASSEMBLER_INFO>

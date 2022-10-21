@@ -1,0 +1,49 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>C:\Users\ve3xone\Desktop\3\3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\ve3xone\Desktop\3\3\Debug\3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>3.map</FILE>
+  <FILE>3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INIT><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>37</LINE></INIT>
+  <WAIT_5ms><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>105</LINE></WAIT_5ms>
+  <strob><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>99</LINE></strob>
+  <readarray><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>76</LINE></readarray>
+  <Array1_1><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>125</LINE></Array1_1>
+  <Array1_2><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>134</LINE></Array1_2>
+  <Array1_3><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>143</LINE></Array1_3>
+  <Array1_4><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>152</LINE></Array1_4>
+  <Array1_5><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>161</LINE></Array1_5>
+  <Array1_6><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>170</LINE></Array1_6>
+  <Array1_7><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>179</LINE></Array1_7>
+  <Array1_8><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>188</LINE></Array1_8>
+  <Array2_1><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>201</LINE></Array2_1>
+  <Array2_2><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>210</LINE></Array2_2>
+  <Array2_3><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>219</LINE></Array2_3>
+  <Array2_4><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>228</LINE></Array2_4>
+  <Array2_5><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>237</LINE></Array2_5>
+  <Array2_6><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>246</LINE></Array2_6>
+  <Array2_7><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>255</LINE></Array2_7>
+  <Array2_8><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>264</LINE></Array2_8>
+  <loopend><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>95</LINE></loopend>
+  <WGLOOP02><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>112</LINE></WGLOOP02>
+  <WGLOOP12><FILE>C:\Users\ve3xone\Desktop\3\3\main.asm</FILE><LINE>113</LINE></WGLOOP12>
+ </LABELS>
+</ASSEMBLER_INFO>
