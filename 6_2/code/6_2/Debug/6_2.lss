@@ -1,0 +1,44 @@
+
+AVRASM ver. 2.2.8  Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm Mon Oct 31 00:15:51 2022
+
+[builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(3): Including file 'Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setStack.asm'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(4): Including file 'Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(5): Including file 'Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\delay_for_lab_6_1.asm'
+[builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(3): Including file 'Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setStack.asm'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(4): Including file 'Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(5): Including file 'Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\delay_for_lab_6_1.asm'
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(8): error: Overlap in .cseg: addr=0x0 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(11): error: Overlap in .cseg: addr=0x2 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(14): error: Overlap in .cseg: addr=0x4 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setStack.asm(3): error: Overlap in .cseg: addr=0x5 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(18): macro 'setStack' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setStack.asm(4): error: Overlap in .cseg: addr=0x6 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(18): macro 'setStack' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setStack.asm(5): error: Overlap in .cseg: addr=0x7 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(18): macro 'setStack' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setStack.asm(6): error: Overlap in .cseg: addr=0x8 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(18): macro 'setStack' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(2): error: Overlap in .cseg: addr=0x9 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(20): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(3): error: Overlap in .cseg: addr=0xa conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(20): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(2): error: Overlap in .cseg: addr=0xb conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(22): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(3): error: Overlap in .cseg: addr=0xc conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(22): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(2): error: Overlap in .cseg: addr=0xd conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(23): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(3): error: Overlap in .cseg: addr=0xe conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(23): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(2): error: Overlap in .cseg: addr=0xf conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(25): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(3): error: Overlap in .cseg: addr=0x10 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(25): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(2): error: Overlap in .cseg: addr=0x11 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(26): macro 'setup' called here
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\setup.asm(3): error: Overlap in .cseg: addr=0x12 conflicts with 0x0:0x13
+Z:\Projects\ASMProjects_ATMEGA16\6_2\code\6_2\main.asm(26): macro 'setup' called here

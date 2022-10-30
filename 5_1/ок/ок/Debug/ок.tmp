@@ -1,0 +1,34 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\Control_Diode.asm</FILE>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\setStack.asm</FILE>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\setup.asm</FILE>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\encoder_check.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\Debug\ок.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ок.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ок.map</FILE>
+  <FILE>ок.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>14</LINE></start>
+  <a><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>20</LINE></a>
+  <plus><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>23</LINE></plus>
+  <minus><FILE>Z:\Projects\ASMProjects_ATMEGA16\5_1\ок\ок\ок.asm</FILE><LINE>22</LINE></minus>
+ </LABELS>
+</ASSEMBLER_INFO>
