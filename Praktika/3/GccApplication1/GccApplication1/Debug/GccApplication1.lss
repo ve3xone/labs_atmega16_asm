@@ -1,0 +1,446 @@
+
+GccApplication1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000027e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000002a  00800060  0000027e  00000312  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000002  0080008a  0080008a  0000033c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000033c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000036c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000038  00000000  00000000  000003a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000008cd  00000000  00000000  000003e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000006a7  00000000  00000000  00000cad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000003cd  00000000  00000000  00001354  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000074  00000000  00000000  00001724  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000400  00000000  00000000  00001798  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000203  00000000  00000000  00001b98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000028  00000000  00000000  00001d9b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d4 e0       	ldi	r29, 0x04	; 4
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ee e7       	ldi	r30, 0x7E	; 126
+  68:	f2 e0       	ldi	r31, 0x02	; 2
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	aa 38       	cpi	r26, 0x8A	; 138
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	aa e8       	ldi	r26, 0x8A	; 138
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	ac 38       	cpi	r26, 0x8C	; 140
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 a9 00 	call	0x152	; 0x152 <main>
+  8a:	0c 94 3d 01 	jmp	0x27a	; 0x27a <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <_Z13clear_displayv>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  92:	87 ee       	ldi	r24, 0xE7	; 231
+  94:	93 e0       	ldi	r25, 0x03	; 3
+  96:	01 97       	sbiw	r24, 0x01	; 1
+  98:	f1 f7       	brne	.-4      	; 0x96 <_Z13clear_displayv+0x4>
+  9a:	00 c0       	rjmp	.+0      	; 0x9c <_Z13clear_displayv+0xa>
+  9c:	00 00       	nop
+
+#pragma region Utils
+void clear_display()
+{
+	_delay_ms(4); //1250
+	PORTB = 0b00000000;
+  9e:	18 ba       	out	0x18, r1	; 24
+	PORTD = 0b00000000;
+  a0:	12 ba       	out	0x12, r1	; 18
+  a2:	08 95       	ret
+
+000000a4 <_Z14select_picturei>:
+}
+
+void select_picture(int i)
+{
+	if (picture == 0)
+  a4:	20 91 8a 00 	lds	r18, 0x008A	; 0x80008a <__data_end>
+  a8:	30 91 8b 00 	lds	r19, 0x008B	; 0x80008b <__data_end+0x1>
+  ac:	21 15       	cp	r18, r1
+  ae:	31 05       	cpc	r19, r1
+  b0:	31 f4       	brne	.+12     	; 0xbe <_Z14select_picturei+0x1a>
+		PORTD = pol0[i];
+  b2:	fc 01       	movw	r30, r24
+  b4:	e7 58       	subi	r30, 0x87	; 135
+  b6:	ff 4f       	sbci	r31, 0xFF	; 255
+  b8:	80 81       	ld	r24, Z
+  ba:	82 bb       	out	0x12, r24	; 18
+  bc:	08 95       	ret
+	else if (picture == 1)
+  be:	21 30       	cpi	r18, 0x01	; 1
+  c0:	31 05       	cpc	r19, r1
+  c2:	31 f4       	brne	.+12     	; 0xd0 <_Z14select_picturei+0x2c>
+		PORTD = pol1[i];
+  c4:	fc 01       	movw	r30, r24
+  c6:	ef 58       	subi	r30, 0x8F	; 143
+  c8:	ff 4f       	sbci	r31, 0xFF	; 255
+  ca:	80 81       	ld	r24, Z
+  cc:	82 bb       	out	0x12, r24	; 18
+  ce:	08 95       	ret
+	else if (picture == 2)
+  d0:	22 30       	cpi	r18, 0x02	; 2
+  d2:	31 05       	cpc	r19, r1
+  d4:	31 f4       	brne	.+12     	; 0xe2 <_Z14select_picturei+0x3e>
+		PORTD = pol2[i];
+  d6:	fc 01       	movw	r30, r24
+  d8:	e7 59       	subi	r30, 0x97	; 151
+  da:	ff 4f       	sbci	r31, 0xFF	; 255
+  dc:	80 81       	ld	r24, Z
+  de:	82 bb       	out	0x12, r24	; 18
+  e0:	08 95       	ret
+	else if (picture == 3)
+  e2:	23 30       	cpi	r18, 0x03	; 3
+  e4:	31 05       	cpc	r19, r1
+  e6:	29 f4       	brne	.+10     	; 0xf2 <_Z14select_picturei+0x4e>
+		PORTD = pol3[i];
+  e8:	fc 01       	movw	r30, r24
+  ea:	ef 59       	subi	r30, 0x9F	; 159
+  ec:	ff 4f       	sbci	r31, 0xFF	; 255
+  ee:	80 81       	ld	r24, Z
+  f0:	82 bb       	out	0x12, r24	; 18
+  f2:	08 95       	ret
+
+000000f4 <_Z11set_picturei>:
+}
+
+void set_picture(int repeat)
+{
+  f4:	ef 92       	push	r14
+  f6:	ff 92       	push	r15
+  f8:	0f 93       	push	r16
+  fa:	1f 93       	push	r17
+  fc:	cf 93       	push	r28
+  fe:	df 93       	push	r29
+ 100:	7c 01       	movw	r14, r24
+	onecheck = false;
+ 102:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+	for (int q = 0;q < repeat;q++)
+ 106:	00 e0       	ldi	r16, 0x00	; 0
+ 108:	10 e0       	ldi	r17, 0x00	; 0
+ 10a:	0e 15       	cp	r16, r14
+ 10c:	1f 05       	cpc	r17, r15
+ 10e:	d4 f4       	brge	.+52     	; 0x144 <_Z11set_picturei+0x50>
+ 110:	c0 e0       	ldi	r28, 0x00	; 0
+ 112:	d0 e0       	ldi	r29, 0x00	; 0
+	{
+		for (int i=0; i < 8;i++)
+ 114:	c8 30       	cpi	r28, 0x08	; 8
+ 116:	d1 05       	cpc	r29, r1
+ 118:	84 f4       	brge	.+32     	; 0x13a <_Z11set_picturei+0x46>
+		{
+			PORTB = pos[i];
+ 11a:	fe 01       	movw	r30, r28
+ 11c:	ef 57       	subi	r30, 0x7F	; 127
+ 11e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 120:	80 81       	ld	r24, Z
+ 122:	88 bb       	out	0x18, r24	; 24
+			select_picture(i);
+ 124:	ce 01       	movw	r24, r28
+ 126:	0e 94 52 00 	call	0xa4	; 0xa4 <_Z14select_picturei>
+ 12a:	83 ef       	ldi	r24, 0xF3	; 243
+ 12c:	91 e0       	ldi	r25, 0x01	; 1
+ 12e:	01 97       	sbiw	r24, 0x01	; 1
+ 130:	f1 f7       	brne	.-4      	; 0x12e <_Z11set_picturei+0x3a>
+ 132:	00 c0       	rjmp	.+0      	; 0x134 <_Z11set_picturei+0x40>
+ 134:	00 00       	nop
+void set_picture(int repeat)
+{
+	onecheck = false;
+	for (int q = 0;q < repeat;q++)
+	{
+		for (int i=0; i < 8;i++)
+ 136:	21 96       	adiw	r28, 0x01	; 1
+ 138:	ed cf       	rjmp	.-38     	; 0x114 <_Z11set_picturei+0x20>
+		{
+			PORTB = pos[i];
+			select_picture(i);
+			_delay_ms(2);
+		}
+		clear_display();
+ 13a:	0e 94 49 00 	call	0x92	; 0x92 <_Z13clear_displayv>
+}
+
+void set_picture(int repeat)
+{
+	onecheck = false;
+	for (int q = 0;q < repeat;q++)
+ 13e:	0f 5f       	subi	r16, 0xFF	; 255
+ 140:	1f 4f       	sbci	r17, 0xFF	; 255
+ 142:	e3 cf       	rjmp	.-58     	; 0x10a <_Z11set_picturei+0x16>
+			select_picture(i);
+			_delay_ms(2);
+		}
+		clear_display();
+	}
+}
+ 144:	df 91       	pop	r29
+ 146:	cf 91       	pop	r28
+ 148:	1f 91       	pop	r17
+ 14a:	0f 91       	pop	r16
+ 14c:	ff 90       	pop	r15
+ 14e:	ef 90       	pop	r14
+ 150:	08 95       	ret
+
+00000152 <main>:
+#pragma endregion Utils
+
+int main(void)
+{
+	//Configure PORTA as output
+	DDRB = 0b11111111;
+ 152:	8f ef       	ldi	r24, 0xFF	; 255
+ 154:	87 bb       	out	0x17, r24	; 23
+	DDRD = 0b11111111;
+ 156:	81 bb       	out	0x11, r24	; 17
+	DDRA = 0b00000000;
+ 158:	1a ba       	out	0x1a, r1	; 26
+	while (true)
+	{
+		if ((PINA & 0b000000010) == 0)
+ 15a:	c9 99       	sbic	0x19, 1	; 25
+ 15c:	1b c0       	rjmp	.+54     	; 0x194 <main+0x42>
+		{
+			while ((PINA & 0b000000010) == 0)
+ 15e:	c9 99       	sbic	0x19, 1	; 25
+ 160:	fc cf       	rjmp	.-8      	; 0x15a <main+0x8>
+			{
+				if (picture >= 4)
+ 162:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <__data_end>
+ 166:	90 91 8b 00 	lds	r25, 0x008B	; 0x80008b <__data_end+0x1>
+ 16a:	04 97       	sbiw	r24, 0x04	; 4
+ 16c:	2c f0       	brlt	.+10     	; 0x178 <main+0x26>
+				{
+					picture = 0;
+ 16e:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <__data_end+0x1>
+ 172:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__data_end>
+ 176:	f3 cf       	rjmp	.-26     	; 0x15e <main+0xc>
+				}
+				else
+				{
+					set_picture(10);
+ 178:	8a e0       	ldi	r24, 0x0A	; 10
+ 17a:	90 e0       	ldi	r25, 0x00	; 0
+ 17c:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+					picture = picture+1;
+ 180:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <__data_end>
+ 184:	90 91 8b 00 	lds	r25, 0x008B	; 0x80008b <__data_end+0x1>
+ 188:	01 96       	adiw	r24, 0x01	; 1
+ 18a:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 18e:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+ 192:	e5 cf       	rjmp	.-54     	; 0x15e <main+0xc>
+				}
+				//_delay_ms(250);
+			}
+		}
+		else if ((PINA & 0b000000001) == 0)
+ 194:	c8 99       	sbic	0x19, 0	; 25
+ 196:	1d c0       	rjmp	.+58     	; 0x1d2 <main+0x80>
+		{
+			while ((PINA & 0b000000001) == 0)
+ 198:	c8 99       	sbic	0x19, 0	; 25
+ 19a:	df cf       	rjmp	.-66     	; 0x15a <main+0x8>
+			{
+				if (picture < 0)
+ 19c:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <__data_end>
+ 1a0:	90 91 8b 00 	lds	r25, 0x008B	; 0x80008b <__data_end+0x1>
+ 1a4:	99 23       	and	r25, r25
+ 1a6:	3c f4       	brge	.+14     	; 0x1b6 <main+0x64>
+				{
+					picture = 3;
+ 1a8:	83 e0       	ldi	r24, 0x03	; 3
+ 1aa:	90 e0       	ldi	r25, 0x00	; 0
+ 1ac:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 1b0:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+ 1b4:	f1 cf       	rjmp	.-30     	; 0x198 <main+0x46>
+				}
+				else
+				{
+					set_picture(10);
+ 1b6:	8a e0       	ldi	r24, 0x0A	; 10
+ 1b8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ba:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+					picture = picture-1;
+ 1be:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <__data_end>
+ 1c2:	90 91 8b 00 	lds	r25, 0x008B	; 0x80008b <__data_end+0x1>
+ 1c6:	01 97       	sbiw	r24, 0x01	; 1
+ 1c8:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 1cc:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+ 1d0:	e3 cf       	rjmp	.-58     	; 0x198 <main+0x46>
+				}
+				//_delay_ms(250);
+			}
+		}
+		else if ((PINA & 0b000000100) == 0)
+ 1d2:	ca 99       	sbic	0x19, 2	; 25
+ 1d4:	09 c0       	rjmp	.+18     	; 0x1e8 <main+0x96>
+		{
+			picture = 0;
+ 1d6:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <__data_end+0x1>
+ 1da:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__data_end>
+			set_picture(1);
+ 1de:	81 e0       	ldi	r24, 0x01	; 1
+ 1e0:	90 e0       	ldi	r25, 0x00	; 0
+ 1e2:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+ 1e6:	b9 cf       	rjmp	.-142    	; 0x15a <main+0x8>
+		}
+		else if ((PINA & 0b000001000) == 0)
+ 1e8:	cb 99       	sbic	0x19, 3	; 25
+ 1ea:	09 c0       	rjmp	.+18     	; 0x1fe <main+0xac>
+		{
+			picture = 1;
+ 1ec:	81 e0       	ldi	r24, 0x01	; 1
+ 1ee:	90 e0       	ldi	r25, 0x00	; 0
+ 1f0:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 1f4:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+			set_picture(1);
+ 1f8:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+ 1fc:	ae cf       	rjmp	.-164    	; 0x15a <main+0x8>
+		}
+		else if ((PINA & 0b000010000) == 0)
+ 1fe:	cc 99       	sbic	0x19, 4	; 25
+ 200:	0b c0       	rjmp	.+22     	; 0x218 <__EEPROM_REGION_LENGTH__+0x18>
+		{
+			picture = 2;
+ 202:	82 e0       	ldi	r24, 0x02	; 2
+ 204:	90 e0       	ldi	r25, 0x00	; 0
+ 206:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 20a:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+			set_picture(1);
+ 20e:	81 e0       	ldi	r24, 0x01	; 1
+ 210:	90 e0       	ldi	r25, 0x00	; 0
+ 212:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+ 216:	a1 cf       	rjmp	.-190    	; 0x15a <main+0x8>
+		}
+		else if ((PINA & 0b000100000) == 0)
+ 218:	cd 99       	sbic	0x19, 5	; 25
+ 21a:	0b c0       	rjmp	.+22     	; 0x232 <__EEPROM_REGION_LENGTH__+0x32>
+		{
+			picture = 3;
+ 21c:	83 e0       	ldi	r24, 0x03	; 3
+ 21e:	90 e0       	ldi	r25, 0x00	; 0
+ 220:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 224:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+			set_picture(1);
+ 228:	81 e0       	ldi	r24, 0x01	; 1
+ 22a:	90 e0       	ldi	r25, 0x00	; 0
+ 22c:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+ 230:	94 cf       	rjmp	.-216    	; 0x15a <main+0x8>
+		}
+		else
+		{
+			if(!onecheck)
+ 232:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 236:	81 11       	cpse	r24, r1
+ 238:	90 cf       	rjmp	.-224    	; 0x15a <main+0x8>
+			{
+				if (picture < 0)
+ 23a:	80 91 8a 00 	lds	r24, 0x008A	; 0x80008a <__data_end>
+ 23e:	90 91 8b 00 	lds	r25, 0x008B	; 0x80008b <__data_end+0x1>
+ 242:	99 23       	and	r25, r25
+ 244:	3c f4       	brge	.+14     	; 0x254 <__EEPROM_REGION_LENGTH__+0x54>
+				{
+					picture = 3;
+ 246:	83 e0       	ldi	r24, 0x03	; 3
+ 248:	90 e0       	ldi	r25, 0x00	; 0
+ 24a:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__data_end+0x1>
+ 24e:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__data_end>
+ 252:	06 c0       	rjmp	.+12     	; 0x260 <__EEPROM_REGION_LENGTH__+0x60>
+				}
+				else if (picture >= 4)
+ 254:	04 97       	sbiw	r24, 0x04	; 4
+ 256:	24 f0       	brlt	.+8      	; 0x260 <__EEPROM_REGION_LENGTH__+0x60>
+				{
+					picture = 0;
+ 258:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <__data_end+0x1>
+ 25c:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__data_end>
+				}
+				set_picture(1);
+ 260:	81 e0       	ldi	r24, 0x01	; 1
+ 262:	90 e0       	ldi	r25, 0x00	; 0
+ 264:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+				set_picture(1);
+ 268:	81 e0       	ldi	r24, 0x01	; 1
+ 26a:	90 e0       	ldi	r25, 0x00	; 0
+ 26c:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+				set_picture(1);
+ 270:	81 e0       	ldi	r24, 0x01	; 1
+ 272:	90 e0       	ldi	r25, 0x00	; 0
+ 274:	0e 94 7a 00 	call	0xf4	; 0xf4 <_Z11set_picturei>
+ 278:	70 cf       	rjmp	.-288    	; 0x15a <main+0x8>
+
+0000027a <_exit>:
+ 27a:	f8 94       	cli
+
+0000027c <__stop_program>:
+ 27c:	ff cf       	rjmp	.-2      	; 0x27c <__stop_program>

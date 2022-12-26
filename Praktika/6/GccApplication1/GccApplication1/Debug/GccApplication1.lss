@@ -1,0 +1,519 @@
+
+GccApplication1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000358  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000052  00800060  00000358  000003ec  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000000a  008000b2  008000b2  0000043e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000043e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000470  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000058  00000000  00000000  000004ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000940  00000000  00000000  00000504  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000006df  00000000  00000000  00000e44  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000485  00000000  00000000  00001523  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000a0  00000000  00000000  000019a8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004f6  00000000  00000000  00001a48  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000021c  00000000  00000000  00001f3e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000048  00000000  00000000  0000215a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 33 00 	jmp	0x66	; 0x66 <__ctors_end>
+   4:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   8:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  10:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  14:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  18:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  1c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  20:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  24:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  28:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  2c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  30:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  34:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  38:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  3c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  40:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  44:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  48:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  4c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  50:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  54:	9d 00       	.word	0x009d	; ????
+  56:	91 00       	.word	0x0091	; ????
+  58:	85 00       	.word	0x0085	; ????
+  5a:	79 00       	.word	0x0079	; ????
+  5c:	6d 00       	.word	0x006d	; ????
+  5e:	73 00       	.word	0x0073	; ????
+  60:	7f 00       	.word	0x007f	; ????
+  62:	8b 00       	.word	0x008b	; ????
+  64:	97 00       	.word	0x0097	; ????
+
+00000066 <__ctors_end>:
+  66:	11 24       	eor	r1, r1
+  68:	1f be       	out	0x3f, r1	; 63
+  6a:	cf e5       	ldi	r28, 0x5F	; 95
+  6c:	d4 e0       	ldi	r29, 0x04	; 4
+  6e:	de bf       	out	0x3e, r29	; 62
+  70:	cd bf       	out	0x3d, r28	; 61
+
+00000072 <__do_copy_data>:
+  72:	10 e0       	ldi	r17, 0x00	; 0
+  74:	a0 e6       	ldi	r26, 0x60	; 96
+  76:	b0 e0       	ldi	r27, 0x00	; 0
+  78:	e8 e5       	ldi	r30, 0x58	; 88
+  7a:	f3 e0       	ldi	r31, 0x03	; 3
+  7c:	02 c0       	rjmp	.+4      	; 0x82 <__do_copy_data+0x10>
+  7e:	05 90       	lpm	r0, Z+
+  80:	0d 92       	st	X+, r0
+  82:	a2 3b       	cpi	r26, 0xB2	; 178
+  84:	b1 07       	cpc	r27, r17
+  86:	d9 f7       	brne	.-10     	; 0x7e <__do_copy_data+0xc>
+
+00000088 <__do_clear_bss>:
+  88:	20 e0       	ldi	r18, 0x00	; 0
+  8a:	a2 eb       	ldi	r26, 0xB2	; 178
+  8c:	b0 e0       	ldi	r27, 0x00	; 0
+  8e:	01 c0       	rjmp	.+2      	; 0x92 <.do_clear_bss_start>
+
+00000090 <.do_clear_bss_loop>:
+  90:	1d 92       	st	X+, r1
+
+00000092 <.do_clear_bss_start>:
+  92:	ac 3b       	cpi	r26, 0xBC	; 188
+  94:	b2 07       	cpc	r27, r18
+  96:	e1 f7       	brne	.-8      	; 0x90 <.do_clear_bss_loop>
+  98:	0e 94 97 01 	call	0x32e	; 0x32e <main>
+  9c:	0c 94 aa 01 	jmp	0x354	; 0x354 <_exit>
+
+000000a0 <__bad_interrupt>:
+  a0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a4 <_Z8ADC_readhh>:
+#pragma endregion Static Chars (Display binnary)
+
+unsigned int ADC_read(unsigned char chnl, unsigned char admux)
+{
+	chnl= chnl & 0b00000111;  // выбор канала АЦП от 0 до 7
+	ADMUX = admux;       //выбран канал A0
+  a4:	67 b9       	out	0x07, r22	; 7
+	ADCSRA|=(1<<ADSC);        // старт преобразования
+  a6:	86 b1       	in	r24, 0x06	; 6
+  a8:	80 64       	ori	r24, 0x40	; 64
+  aa:	86 b9       	out	0x06, r24	; 6
+	while(!(ADCSRA & (1<<ADIF)));   // ждем окончания преобразования
+  ac:	34 9b       	sbis	0x06, 4	; 6
+  ae:	fe cf       	rjmp	.-4      	; 0xac <_Z8ADC_readhh+0x8>
+	ADCSRA|=(1<<ADIF);        // очистим ADIF когда преобразование закончится
+  b0:	86 b1       	in	r24, 0x06	; 6
+  b2:	80 61       	ori	r24, 0x10	; 16
+  b4:	86 b9       	out	0x06, r24	; 6
+	return (ADC);             //возвращаем рассчитанное значение АЦП
+  b6:	84 b1       	in	r24, 0x04	; 4
+  b8:	95 b1       	in	r25, 0x05	; 5
+}
+  ba:	08 95       	ret
+
+000000bc <_Z12cleardisplayv>:
+
+#pragma region Control_Display
+
+void cleardisplay(){
+	//_delay_us(150); /1250
+	PORTB = 0b00000000;
+  bc:	18 ba       	out	0x18, r1	; 24
+	PORTD = 0b00000000;
+  be:	12 ba       	out	0x12, r1	; 18
+  c0:	08 95       	ret
+
+000000c2 <_Z14select_picturei>:
+}
+
+void select_picture(int i){
+	switch (matrix_display){
+  c2:	e0 91 b8 00 	lds	r30, 0x00B8	; 0x8000b8 <matrix_display>
+  c6:	f0 91 b9 00 	lds	r31, 0x00B9	; 0x8000b9 <matrix_display+0x1>
+  ca:	34 96       	adiw	r30, 0x04	; 4
+  cc:	e9 30       	cpi	r30, 0x09	; 9
+  ce:	f1 05       	cpc	r31, r1
+  d0:	c8 f5       	brcc	.+114    	; 0x144 <_Z14select_picturei+0x82>
+  d2:	e6 5d       	subi	r30, 0xD6	; 214
+  d4:	ff 4f       	sbci	r31, 0xFF	; 255
+  d6:	0c 94 a4 01 	jmp	0x348	; 0x348 <__tablejump2__>
+		case 0:	PORTD = osnov[i]; break;
+  da:	fc 01       	movw	r30, r24
+  dc:	ef 55       	subi	r30, 0x5F	; 95
+  de:	ff 4f       	sbci	r31, 0xFF	; 255
+  e0:	80 81       	ld	r24, Z
+  e2:	82 bb       	out	0x12, r24	; 18
+  e4:	08 95       	ret
+		case 1: PORTD = pos_1[i]; break;
+  e6:	fc 01       	movw	r30, r24
+  e8:	e7 56       	subi	r30, 0x67	; 103
+  ea:	ff 4f       	sbci	r31, 0xFF	; 255
+  ec:	80 81       	ld	r24, Z
+  ee:	82 bb       	out	0x12, r24	; 18
+  f0:	08 95       	ret
+		case -1: PORTD = pos_minus1[i]; break;
+  f2:	fc 01       	movw	r30, r24
+  f4:	ef 56       	subi	r30, 0x6F	; 111
+  f6:	ff 4f       	sbci	r31, 0xFF	; 255
+  f8:	80 81       	ld	r24, Z
+  fa:	82 bb       	out	0x12, r24	; 18
+  fc:	08 95       	ret
+		case 2: PORTD = pos_2[i]; break;
+  fe:	fc 01       	movw	r30, r24
+ 100:	e7 57       	subi	r30, 0x77	; 119
+ 102:	ff 4f       	sbci	r31, 0xFF	; 255
+ 104:	80 81       	ld	r24, Z
+ 106:	82 bb       	out	0x12, r24	; 18
+ 108:	08 95       	ret
+		case -2: PORTD = pos_minus2[i]; break;
+ 10a:	fc 01       	movw	r30, r24
+ 10c:	ef 57       	subi	r30, 0x7F	; 127
+ 10e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 110:	80 81       	ld	r24, Z
+ 112:	82 bb       	out	0x12, r24	; 18
+ 114:	08 95       	ret
+		case 3: PORTD = pos_3[i]; break;
+ 116:	fc 01       	movw	r30, r24
+ 118:	e7 58       	subi	r30, 0x87	; 135
+ 11a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 11c:	80 81       	ld	r24, Z
+ 11e:	82 bb       	out	0x12, r24	; 18
+ 120:	08 95       	ret
+		case -3: PORTD = pos_minus3[i]; break;
+ 122:	fc 01       	movw	r30, r24
+ 124:	ef 58       	subi	r30, 0x8F	; 143
+ 126:	ff 4f       	sbci	r31, 0xFF	; 255
+ 128:	80 81       	ld	r24, Z
+ 12a:	82 bb       	out	0x12, r24	; 18
+ 12c:	08 95       	ret
+		case 4: PORTD = pos_4[i]; break;
+ 12e:	fc 01       	movw	r30, r24
+ 130:	e7 59       	subi	r30, 0x97	; 151
+ 132:	ff 4f       	sbci	r31, 0xFF	; 255
+ 134:	80 81       	ld	r24, Z
+ 136:	82 bb       	out	0x12, r24	; 18
+ 138:	08 95       	ret
+		case -4: PORTD = pos_minus4[i]; break;
+ 13a:	fc 01       	movw	r30, r24
+ 13c:	ef 59       	subi	r30, 0x9F	; 159
+ 13e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 140:	80 81       	ld	r24, Z
+ 142:	82 bb       	out	0x12, r24	; 18
+ 144:	08 95       	ret
+
+00000146 <_Z10SetPicturev>:
+	}
+}
+
+void SetPicture()
+{
+ 146:	cf 93       	push	r28
+ 148:	df 93       	push	r29
+	for (int i=0; i < 8;i++)
+ 14a:	c0 e0       	ldi	r28, 0x00	; 0
+ 14c:	d0 e0       	ldi	r29, 0x00	; 0
+ 14e:	c8 30       	cpi	r28, 0x08	; 8
+ 150:	d1 05       	cpc	r29, r1
+ 152:	84 f4       	brge	.+32     	; 0x174 <_Z10SetPicturev+0x2e>
+	{
+		PORTB = POSITION[i];
+ 154:	fe 01       	movw	r30, r28
+ 156:	e7 55       	subi	r30, 0x57	; 87
+ 158:	ff 4f       	sbci	r31, 0xFF	; 255
+ 15a:	80 81       	ld	r24, Z
+ 15c:	88 bb       	out	0x18, r24	; 24
+		select_picture(i);
+ 15e:	ce 01       	movw	r24, r28
+ 160:	0e 94 61 00 	call	0xc2	; 0xc2 <_Z14select_picturei>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 164:	83 ef       	ldi	r24, 0xF3	; 243
+ 166:	91 e0       	ldi	r25, 0x01	; 1
+ 168:	01 97       	sbiw	r24, 0x01	; 1
+ 16a:	f1 f7       	brne	.-4      	; 0x168 <_Z10SetPicturev+0x22>
+ 16c:	00 c0       	rjmp	.+0      	; 0x16e <_Z10SetPicturev+0x28>
+ 16e:	00 00       	nop
+	}
+}
+
+void SetPicture()
+{
+	for (int i=0; i < 8;i++)
+ 170:	21 96       	adiw	r28, 0x01	; 1
+ 172:	ed cf       	rjmp	.-38     	; 0x14e <_Z10SetPicturev+0x8>
+	{
+		PORTB = POSITION[i];
+		select_picture(i);
+		_delay_ms(2);
+	}
+	cleardisplay();		//может быть не видна в протеусе последния строка
+ 174:	0e 94 5e 00 	call	0xbc	; 0xbc <_Z12cleardisplayv>
+}
+ 178:	df 91       	pop	r29
+ 17a:	cf 91       	pop	r28
+ 17c:	08 95       	ret
+
+0000017e <_Z11cailbrationv>:
+
+#pragma region Control gamepad
+
+void cailbration()
+{
+	if (lastrun){
+ 17e:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 182:	88 23       	and	r24, r24
+ 184:	91 f0       	breq	.+36     	; 0x1aa <_Z11cailbrationv+0x2c>
+		x_cal = x;
+ 186:	80 91 ba 00 	lds	r24, 0x00BA	; 0x8000ba <x>
+ 18a:	90 91 bb 00 	lds	r25, 0x00BB	; 0x8000bb <x+0x1>
+ 18e:	90 93 b5 00 	sts	0x00B5, r25	; 0x8000b5 <x_cal+0x1>
+ 192:	80 93 b4 00 	sts	0x00B4, r24	; 0x8000b4 <x_cal>
+		y_cal = y;
+ 196:	80 91 b6 00 	lds	r24, 0x00B6	; 0x8000b6 <y>
+ 19a:	90 91 b7 00 	lds	r25, 0x00B7	; 0x8000b7 <y+0x1>
+ 19e:	90 93 b3 00 	sts	0x00B3, r25	; 0x8000b3 <__data_end+0x1>
+ 1a2:	80 93 b2 00 	sts	0x00B2, r24	; 0x8000b2 <__data_end>
+		lastrun	= false;
+ 1a6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 1aa:	08 95       	ret
+
+000001ac <_Z16getmatrixdisplayv>:
+	}
+}
+
+void getmatrixdisplay(){
+	if (x == x_cal && y == y_cal)
+ 1ac:	80 91 ba 00 	lds	r24, 0x00BA	; 0x8000ba <x>
+ 1b0:	90 91 bb 00 	lds	r25, 0x00BB	; 0x8000bb <x+0x1>
+ 1b4:	20 91 b4 00 	lds	r18, 0x00B4	; 0x8000b4 <x_cal>
+ 1b8:	30 91 b5 00 	lds	r19, 0x00B5	; 0x8000b5 <x_cal+0x1>
+ 1bc:	82 17       	cp	r24, r18
+ 1be:	93 07       	cpc	r25, r19
+ 1c0:	81 f4       	brne	.+32     	; 0x1e2 <_Z16getmatrixdisplayv+0x36>
+ 1c2:	60 91 b6 00 	lds	r22, 0x00B6	; 0x8000b6 <y>
+ 1c6:	70 91 b7 00 	lds	r23, 0x00B7	; 0x8000b7 <y+0x1>
+ 1ca:	40 91 b2 00 	lds	r20, 0x00B2	; 0x8000b2 <__data_end>
+ 1ce:	50 91 b3 00 	lds	r21, 0x00B3	; 0x8000b3 <__data_end+0x1>
+ 1d2:	64 17       	cp	r22, r20
+ 1d4:	75 07       	cpc	r23, r21
+ 1d6:	29 f4       	brne	.+10     	; 0x1e2 <_Z16getmatrixdisplayv+0x36>
+	matrix_display = 0;
+ 1d8:	10 92 b9 00 	sts	0x00B9, r1	; 0x8000b9 <matrix_display+0x1>
+ 1dc:	10 92 b8 00 	sts	0x00B8, r1	; 0x8000b8 <matrix_display>
+ 1e0:	08 95       	ret
+	else if (x >= 800 && y == y_cal)
+ 1e2:	80 32       	cpi	r24, 0x20	; 32
+ 1e4:	43 e0       	ldi	r20, 0x03	; 3
+ 1e6:	94 07       	cpc	r25, r20
+ 1e8:	94 f0       	brlt	.+36     	; 0x20e <__EEPROM_REGION_LENGTH__+0xe>
+ 1ea:	60 91 b6 00 	lds	r22, 0x00B6	; 0x8000b6 <y>
+ 1ee:	70 91 b7 00 	lds	r23, 0x00B7	; 0x8000b7 <y+0x1>
+ 1f2:	40 91 b2 00 	lds	r20, 0x00B2	; 0x8000b2 <__data_end>
+ 1f6:	50 91 b3 00 	lds	r21, 0x00B3	; 0x8000b3 <__data_end+0x1>
+ 1fa:	64 17       	cp	r22, r20
+ 1fc:	75 07       	cpc	r23, r21
+ 1fe:	39 f4       	brne	.+14     	; 0x20e <__EEPROM_REGION_LENGTH__+0xe>
+	matrix_display = 1;
+ 200:	81 e0       	ldi	r24, 0x01	; 1
+ 202:	90 e0       	ldi	r25, 0x00	; 0
+ 204:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 208:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 20c:	08 95       	ret
+	else if (x >= 800 && y >= 800)
+ 20e:	80 32       	cpi	r24, 0x20	; 32
+ 210:	63 e0       	ldi	r22, 0x03	; 3
+ 212:	96 07       	cpc	r25, r22
+ 214:	74 f0       	brlt	.+28     	; 0x232 <__EEPROM_REGION_LENGTH__+0x32>
+ 216:	40 91 b6 00 	lds	r20, 0x00B6	; 0x8000b6 <y>
+ 21a:	50 91 b7 00 	lds	r21, 0x00B7	; 0x8000b7 <y+0x1>
+ 21e:	40 32       	cpi	r20, 0x20	; 32
+ 220:	53 40       	sbci	r21, 0x03	; 3
+ 222:	3c f0       	brlt	.+14     	; 0x232 <__EEPROM_REGION_LENGTH__+0x32>
+	matrix_display = 3;
+ 224:	83 e0       	ldi	r24, 0x03	; 3
+ 226:	90 e0       	ldi	r25, 0x00	; 0
+ 228:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 22c:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 230:	08 95       	ret
+	else if (x >= 800 && y <= 128)
+ 232:	80 32       	cpi	r24, 0x20	; 32
+ 234:	43 e0       	ldi	r20, 0x03	; 3
+ 236:	94 07       	cpc	r25, r20
+ 238:	74 f0       	brlt	.+28     	; 0x256 <__EEPROM_REGION_LENGTH__+0x56>
+ 23a:	40 91 b6 00 	lds	r20, 0x00B6	; 0x8000b6 <y>
+ 23e:	50 91 b7 00 	lds	r21, 0x00B7	; 0x8000b7 <y+0x1>
+ 242:	41 38       	cpi	r20, 0x81	; 129
+ 244:	51 05       	cpc	r21, r1
+ 246:	3c f4       	brge	.+14     	; 0x256 <__EEPROM_REGION_LENGTH__+0x56>
+	matrix_display = -4;
+ 248:	8c ef       	ldi	r24, 0xFC	; 252
+ 24a:	9f ef       	ldi	r25, 0xFF	; 255
+ 24c:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 250:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 254:	08 95       	ret
+	else if (x < 128 && y == y_cal)
+ 256:	80 38       	cpi	r24, 0x80	; 128
+ 258:	91 05       	cpc	r25, r1
+ 25a:	94 f4       	brge	.+36     	; 0x280 <__EEPROM_REGION_LENGTH__+0x80>
+ 25c:	60 91 b6 00 	lds	r22, 0x00B6	; 0x8000b6 <y>
+ 260:	70 91 b7 00 	lds	r23, 0x00B7	; 0x8000b7 <y+0x1>
+ 264:	40 91 b2 00 	lds	r20, 0x00B2	; 0x8000b2 <__data_end>
+ 268:	50 91 b3 00 	lds	r21, 0x00B3	; 0x8000b3 <__data_end+0x1>
+ 26c:	64 17       	cp	r22, r20
+ 26e:	75 07       	cpc	r23, r21
+ 270:	39 f4       	brne	.+14     	; 0x280 <__EEPROM_REGION_LENGTH__+0x80>
+	matrix_display = -1;
+ 272:	8f ef       	ldi	r24, 0xFF	; 255
+ 274:	9f ef       	ldi	r25, 0xFF	; 255
+ 276:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 27a:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 27e:	08 95       	ret
+	else if(x < 128 && y < 128)
+ 280:	80 38       	cpi	r24, 0x80	; 128
+ 282:	91 05       	cpc	r25, r1
+ 284:	74 f4       	brge	.+28     	; 0x2a2 <__EEPROM_REGION_LENGTH__+0xa2>
+ 286:	40 91 b6 00 	lds	r20, 0x00B6	; 0x8000b6 <y>
+ 28a:	50 91 b7 00 	lds	r21, 0x00B7	; 0x8000b7 <y+0x1>
+ 28e:	40 38       	cpi	r20, 0x80	; 128
+ 290:	51 05       	cpc	r21, r1
+ 292:	3c f4       	brge	.+14     	; 0x2a2 <__EEPROM_REGION_LENGTH__+0xa2>
+	matrix_display = -3;
+ 294:	8d ef       	ldi	r24, 0xFD	; 253
+ 296:	9f ef       	ldi	r25, 0xFF	; 255
+ 298:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 29c:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 2a0:	08 95       	ret
+	else if (y >= 800 && x < 128)
+ 2a2:	40 91 b6 00 	lds	r20, 0x00B6	; 0x8000b6 <y>
+ 2a6:	50 91 b7 00 	lds	r21, 0x00B7	; 0x8000b7 <y+0x1>
+ 2aa:	40 32       	cpi	r20, 0x20	; 32
+ 2ac:	63 e0       	ldi	r22, 0x03	; 3
+ 2ae:	56 07       	cpc	r21, r22
+ 2b0:	54 f0       	brlt	.+20     	; 0x2c6 <__EEPROM_REGION_LENGTH__+0xc6>
+ 2b2:	80 38       	cpi	r24, 0x80	; 128
+ 2b4:	91 05       	cpc	r25, r1
+ 2b6:	3c f4       	brge	.+14     	; 0x2c6 <__EEPROM_REGION_LENGTH__+0xc6>
+	matrix_display = 4;
+ 2b8:	84 e0       	ldi	r24, 0x04	; 4
+ 2ba:	90 e0       	ldi	r25, 0x00	; 0
+ 2bc:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 2c0:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 2c4:	08 95       	ret
+	else if (y >= 800 && x == x_cal)
+ 2c6:	40 32       	cpi	r20, 0x20	; 32
+ 2c8:	63 e0       	ldi	r22, 0x03	; 3
+ 2ca:	56 07       	cpc	r21, r22
+ 2cc:	54 f0       	brlt	.+20     	; 0x2e2 <__EEPROM_REGION_LENGTH__+0xe2>
+ 2ce:	82 17       	cp	r24, r18
+ 2d0:	93 07       	cpc	r25, r19
+ 2d2:	39 f4       	brne	.+14     	; 0x2e2 <__EEPROM_REGION_LENGTH__+0xe2>
+	matrix_display = 2;
+ 2d4:	82 e0       	ldi	r24, 0x02	; 2
+ 2d6:	90 e0       	ldi	r25, 0x00	; 0
+ 2d8:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 2dc:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 2e0:	08 95       	ret
+	else if (y <= 128 && x == x_cal)
+ 2e2:	41 38       	cpi	r20, 0x81	; 129
+ 2e4:	51 05       	cpc	r21, r1
+ 2e6:	4c f4       	brge	.+18     	; 0x2fa <__EEPROM_REGION_LENGTH__+0xfa>
+ 2e8:	82 17       	cp	r24, r18
+ 2ea:	93 07       	cpc	r25, r19
+ 2ec:	31 f4       	brne	.+12     	; 0x2fa <__EEPROM_REGION_LENGTH__+0xfa>
+	matrix_display = -2;
+ 2ee:	8e ef       	ldi	r24, 0xFE	; 254
+ 2f0:	9f ef       	ldi	r25, 0xFF	; 255
+ 2f2:	90 93 b9 00 	sts	0x00B9, r25	; 0x8000b9 <matrix_display+0x1>
+ 2f6:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <matrix_display>
+ 2fa:	08 95       	ret
+
+000002fc <_Z26Get_X_and_Y_matrix_displayv>:
+}
+
+void Get_X_and_Y_matrix_display(){
+	x = ADC_read(0, 0b01000011);
+ 2fc:	63 e4       	ldi	r22, 0x43	; 67
+ 2fe:	80 e0       	ldi	r24, 0x00	; 0
+ 300:	0e 94 52 00 	call	0xa4	; 0xa4 <_Z8ADC_readhh>
+ 304:	90 93 bb 00 	sts	0x00BB, r25	; 0x8000bb <x+0x1>
+ 308:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <x>
+	y = ADC_read(0, 0b01000100);
+ 30c:	64 e4       	ldi	r22, 0x44	; 68
+ 30e:	80 e0       	ldi	r24, 0x00	; 0
+ 310:	0e 94 52 00 	call	0xa4	; 0xa4 <_Z8ADC_readhh>
+ 314:	90 93 b7 00 	sts	0x00B7, r25	; 0x8000b7 <y+0x1>
+ 318:	80 93 b6 00 	sts	0x00B6, r24	; 0x8000b6 <y>
+	cailbration();
+ 31c:	0e 94 bf 00 	call	0x17e	; 0x17e <_Z11cailbrationv>
+	if (!lastrun)
+ 320:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 324:	81 11       	cpse	r24, r1
+ 326:	02 c0       	rjmp	.+4      	; 0x32c <_Z26Get_X_and_Y_matrix_displayv+0x30>
+		getmatrixdisplay();
+ 328:	0e 94 d6 00 	call	0x1ac	; 0x1ac <_Z16getmatrixdisplayv>
+ 32c:	08 95       	ret
+
+0000032e <main>:
+
+#pragma endregion Control gamepad
+
+int main(void)
+{
+	DDRB = 0b11111111;
+ 32e:	8f ef       	ldi	r24, 0xFF	; 255
+ 330:	87 bb       	out	0x17, r24	; 23
+	DDRD = 0b11111111;
+ 332:	81 bb       	out	0x11, r24	; 17
+	DDRA = 0b00000000;
+ 334:	1a ba       	out	0x1a, r1	; 26
+	
+	ADMUX=(1<<REFS0);          // выбор внутреннего опорного напряжения
+ 336:	80 e4       	ldi	r24, 0x40	; 64
+ 338:	87 b9       	out	0x07, r24	; 7
+	ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);     // разрешаем АЦП и устанавливаем коэффициент деления предделителя = 128
+ 33a:	87 e8       	ldi	r24, 0x87	; 135
+ 33c:	86 b9       	out	0x06, r24	; 6
+	
+	while (true)
+	{
+		Get_X_and_Y_matrix_display();
+ 33e:	0e 94 7e 01 	call	0x2fc	; 0x2fc <_Z26Get_X_and_Y_matrix_displayv>
+		SetPicture();
+ 342:	0e 94 a3 00 	call	0x146	; 0x146 <_Z10SetPicturev>
+ 346:	fb cf       	rjmp	.-10     	; 0x33e <main+0x10>
+
+00000348 <__tablejump2__>:
+ 348:	ee 0f       	add	r30, r30
+ 34a:	ff 1f       	adc	r31, r31
+ 34c:	05 90       	lpm	r0, Z+
+ 34e:	f4 91       	lpm	r31, Z
+ 350:	e0 2d       	mov	r30, r0
+ 352:	09 94       	ijmp
+
+00000354 <_exit>:
+ 354:	f8 94       	cli
+
+00000356 <__stop_program>:
+ 356:	ff cf       	rjmp	.-2      	; 0x356 <__stop_program>
