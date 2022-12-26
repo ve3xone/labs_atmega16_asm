@@ -1,0 +1,704 @@
+
+GccApplication1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000042e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000006  00800060  0000042e  000004c2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000005  00800066  00800066  000004c8  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000004c8  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000004f8  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000c8  00000000  00000000  00000534  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000154d  00000000  00000000  000005fc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000093b  00000000  00000000  00001b49  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000009cc  00000000  00000000  00002484  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000238  00000000  00000000  00002e50  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000659  00000000  00000000  00003088  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000c25  00000000  00000000  000036e1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000c0  00000000  00000000  00004306  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d4 e0       	ldi	r29, 0x04	; 4
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ee e2       	ldi	r30, 0x2E	; 46
+  68:	f4 e0       	ldi	r31, 0x04	; 4
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a6 36       	cpi	r26, 0x66	; 102
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	a6 e6       	ldi	r26, 0x66	; 102
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	ab 36       	cpi	r26, 0x6B	; 107
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <main>
+  8a:	0c 94 15 02 	jmp	0x42a	; 0x42a <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <_Z13lcdSendNibblecc>:
+    while (lcdIsBusy()) ;
+  
+    lcdRawSendByte((0b00011000 | dir), LCD_COMMAND);
+    pos--;
+  }  
+}
+  92:	9a b3       	in	r25, 0x1a	; 26
+  94:	97 60       	ori	r25, 0x07	; 7
+  96:	9a bb       	out	0x1a, r25	; 26
+  98:	9a b3       	in	r25, 0x1a	; 26
+  9a:	98 67       	ori	r25, 0x78	; 120
+  9c:	9a bb       	out	0x1a, r25	; 26
+  9e:	9b b3       	in	r25, 0x1b	; 27
+  a0:	9d 7f       	andi	r25, 0xFD	; 253
+  a2:	9b bb       	out	0x1b, r25	; 27
+  a4:	66 23       	and	r22, r22
+  a6:	21 f0       	breq	.+8      	; 0xb0 <_Z13lcdSendNibblecc+0x1e>
+  a8:	9b b3       	in	r25, 0x1b	; 27
+  aa:	91 60       	ori	r25, 0x01	; 1
+  ac:	9b bb       	out	0x1b, r25	; 27
+  ae:	03 c0       	rjmp	.+6      	; 0xb6 <_Z13lcdSendNibblecc+0x24>
+  b0:	9b b3       	in	r25, 0x1b	; 27
+  b2:	9e 7f       	andi	r25, 0xFE	; 254
+  b4:	9b bb       	out	0x1b, r25	; 27
+  b6:	9b b3       	in	r25, 0x1b	; 27
+  b8:	94 60       	ori	r25, 0x04	; 4
+  ba:	9b bb       	out	0x1b, r25	; 27
+  bc:	9b b3       	in	r25, 0x1b	; 27
+  be:	97 78       	andi	r25, 0x87	; 135
+  c0:	9b bb       	out	0x1b, r25	; 27
+  c2:	83 ff       	sbrs	r24, 3
+  c4:	03 c0       	rjmp	.+6      	; 0xcc <_Z13lcdSendNibblecc+0x3a>
+  c6:	9b b3       	in	r25, 0x1b	; 27
+  c8:	90 64       	ori	r25, 0x40	; 64
+  ca:	9b bb       	out	0x1b, r25	; 27
+  cc:	82 ff       	sbrs	r24, 2
+  ce:	03 c0       	rjmp	.+6      	; 0xd6 <_Z13lcdSendNibblecc+0x44>
+  d0:	9b b3       	in	r25, 0x1b	; 27
+  d2:	90 62       	ori	r25, 0x20	; 32
+  d4:	9b bb       	out	0x1b, r25	; 27
+  d6:	81 ff       	sbrs	r24, 1
+  d8:	03 c0       	rjmp	.+6      	; 0xe0 <_Z13lcdSendNibblecc+0x4e>
+  da:	9b b3       	in	r25, 0x1b	; 27
+  dc:	90 61       	ori	r25, 0x10	; 16
+  de:	9b bb       	out	0x1b, r25	; 27
+  e0:	80 ff       	sbrs	r24, 0
+  e2:	03 c0       	rjmp	.+6      	; 0xea <_Z13lcdSendNibblecc+0x58>
+  e4:	8b b3       	in	r24, 0x1b	; 27
+  e6:	88 60       	ori	r24, 0x08	; 8
+  e8:	8b bb       	out	0x1b, r24	; 27
+  ea:	00 c0       	rjmp	.+0      	; 0xec <_Z13lcdSendNibblecc+0x5a>
+  ec:	00 c0       	rjmp	.+0      	; 0xee <_Z13lcdSendNibblecc+0x5c>
+  ee:	00 00       	nop
+  f0:	8b b3       	in	r24, 0x1b	; 27
+  f2:	8b 7f       	andi	r24, 0xFB	; 251
+  f4:	8b bb       	out	0x1b, r24	; 27
+  f6:	08 95       	ret
+
+000000f8 <_Z14lcdRawSendBytecc>:
+  f8:	cf 93       	push	r28
+  fa:	df 93       	push	r29
+  fc:	c8 2f       	mov	r28, r24
+  fe:	d6 2f       	mov	r29, r22
+ 100:	90 e0       	ldi	r25, 0x00	; 0
+ 102:	95 95       	asr	r25
+ 104:	87 95       	ror	r24
+ 106:	95 95       	asr	r25
+ 108:	87 95       	ror	r24
+ 10a:	95 95       	asr	r25
+ 10c:	87 95       	ror	r24
+ 10e:	95 95       	asr	r25
+ 110:	87 95       	ror	r24
+ 112:	0e 94 49 00 	call	0x92	; 0x92 <_Z13lcdSendNibblecc>
+ 116:	6d 2f       	mov	r22, r29
+ 118:	8c 2f       	mov	r24, r28
+ 11a:	0e 94 49 00 	call	0x92	; 0x92 <_Z13lcdSendNibblecc>
+ 11e:	df 91       	pop	r29
+ 120:	cf 91       	pop	r28
+ 122:	08 95       	ret
+
+00000124 <_Z9lcdIsBusyv>:
+ 124:	89 ef       	ldi	r24, 0xF9	; 249
+ 126:	90 e0       	ldi	r25, 0x00	; 0
+ 128:	01 97       	sbiw	r24, 0x01	; 1
+ 12a:	f1 f7       	brne	.-4      	; 0x128 <_Z9lcdIsBusyv+0x4>
+ 12c:	00 c0       	rjmp	.+0      	; 0x12e <_Z9lcdIsBusyv+0xa>
+ 12e:	00 00       	nop
+ 130:	80 e0       	ldi	r24, 0x00	; 0
+ 132:	08 95       	ret
+
+00000134 <_Z7lcdInitv>:
+ 134:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 138:	81 11       	cpse	r24, r1
+ 13a:	fc cf       	rjmp	.-8      	; 0x134 <_Z7lcdInitv>
+ 13c:	60 e0       	ldi	r22, 0x00	; 0
+ 13e:	82 e0       	ldi	r24, 0x02	; 2
+ 140:	0e 94 49 00 	call	0x92	; 0x92 <_Z13lcdSendNibblecc>
+ 144:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 148:	81 11       	cpse	r24, r1
+ 14a:	fc cf       	rjmp	.-8      	; 0x144 <_Z7lcdInitv+0x10>
+ 14c:	60 e0       	ldi	r22, 0x00	; 0
+ 14e:	88 e2       	ldi	r24, 0x28	; 40
+ 150:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 154:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 158:	81 11       	cpse	r24, r1
+ 15a:	fc cf       	rjmp	.-8      	; 0x154 <_Z7lcdInitv+0x20>
+ 15c:	60 e0       	ldi	r22, 0x00	; 0
+ 15e:	8f e0       	ldi	r24, 0x0F	; 15
+ 160:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 164:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 168:	81 11       	cpse	r24, r1
+ 16a:	fc cf       	rjmp	.-8      	; 0x164 <_Z7lcdInitv+0x30>
+ 16c:	60 e0       	ldi	r22, 0x00	; 0
+ 16e:	86 e0       	ldi	r24, 0x06	; 6
+ 170:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 174:	08 95       	ret
+
+00000176 <_Z12lcdSetCursorc>:
+ 176:	cf 93       	push	r28
+ 178:	c8 2f       	mov	r28, r24
+ 17a:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 17e:	81 11       	cpse	r24, r1
+ 180:	fc cf       	rjmp	.-8      	; 0x17a <_Z12lcdSetCursorc+0x4>
+ 182:	60 e0       	ldi	r22, 0x00	; 0
+ 184:	8c 2f       	mov	r24, r28
+ 186:	8c 60       	ori	r24, 0x0C	; 12
+ 188:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 18c:	cf 91       	pop	r28
+ 18e:	08 95       	ret
+
+00000190 <_Z8lcdClearv>:
+ 190:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 194:	81 11       	cpse	r24, r1
+ 196:	fc cf       	rjmp	.-8      	; 0x190 <_Z8lcdClearv>
+ 198:	60 e0       	ldi	r22, 0x00	; 0
+ 19a:	81 e0       	ldi	r24, 0x01	; 1
+ 19c:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 1a0:	08 95       	ret
+
+000001a2 <_Z9lcdGotoXYcc>:
+ 1a2:	cf 93       	push	r28
+ 1a4:	df 93       	push	r29
+ 1a6:	d8 2f       	mov	r29, r24
+ 1a8:	c6 2f       	mov	r28, r22
+ 1aa:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 1ae:	81 11       	cpse	r24, r1
+ 1b0:	fc cf       	rjmp	.-8      	; 0x1aa <_Z9lcdGotoXYcc+0x8>
+ 1b2:	8c 2f       	mov	r24, r28
+ 1b4:	90 e4       	ldi	r25, 0x40	; 64
+ 1b6:	d9 9f       	mul	r29, r25
+ 1b8:	80 0d       	add	r24, r0
+ 1ba:	11 24       	eor	r1, r1
+ 1bc:	60 e0       	ldi	r22, 0x00	; 0
+ 1be:	80 68       	ori	r24, 0x80	; 128
+ 1c0:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 1c4:	df 91       	pop	r29
+ 1c6:	cf 91       	pop	r28
+ 1c8:	08 95       	ret
+
+000001ca <_Z7lcdPutsPc>:
+
+/*
+  Выводит строку из RAM в позицию курсора.
+*/
+void lcdPuts(char *str) {
+ 1ca:	0f 93       	push	r16
+ 1cc:	1f 93       	push	r17
+ 1ce:	cf 93       	push	r28
+ 1d0:	df 93       	push	r29
+ 1d2:	ec 01       	movw	r28, r24
+  while (*str){
+ 1d4:	88 81       	ld	r24, Y
+ 1d6:	88 23       	and	r24, r24
+ 1d8:	69 f0       	breq	.+26     	; 0x1f4 <_Z7lcdPutsPc+0x2a>
+    while (lcdIsBusy()) ;
+ 1da:	0e 94 92 00 	call	0x124	; 0x124 <_Z9lcdIsBusyv>
+ 1de:	81 11       	cpse	r24, r1
+ 1e0:	fc cf       	rjmp	.-8      	; 0x1da <_Z7lcdPutsPc+0x10>
+    
+    lcdRawSendByte(*str++, LCD_DATA);
+ 1e2:	8e 01       	movw	r16, r28
+ 1e4:	0f 5f       	subi	r16, 0xFF	; 255
+ 1e6:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1e8:	61 e0       	ldi	r22, 0x01	; 1
+ 1ea:	88 81       	ld	r24, Y
+ 1ec:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+ 1f0:	e8 01       	movw	r28, r16
+
+/*
+  Выводит строку из RAM в позицию курсора.
+*/
+void lcdPuts(char *str) {
+  while (*str){
+ 1f2:	f0 cf       	rjmp	.-32     	; 0x1d4 <_Z7lcdPutsPc+0xa>
+    while (lcdIsBusy()) ;
+    
+    lcdRawSendByte(*str++, LCD_DATA);
+  }
+}
+ 1f4:	df 91       	pop	r29
+ 1f6:	cf 91       	pop	r28
+ 1f8:	1f 91       	pop	r17
+ 1fa:	0f 91       	pop	r16
+ 1fc:	08 95       	ret
+
+000001fe <_Z7dhtreadv>:
+typedef unsigned int byte; /*переопределение типов вводит синоним для существующего типа*/
+
+int dhtread ()
+{
+	byte j = 0, i = 0; /*локальные переменные*/
+	datadht[0] = datadht[1] = datadht[2] = datadht[3] = datadht[4] = 0 ;
+ 1fe:	e6 e6       	ldi	r30, 0x66	; 102
+ 200:	f0 e0       	ldi	r31, 0x00	; 0
+ 202:	14 82       	std	Z+4, r1	; 0x04
+ 204:	13 82       	std	Z+3, r1	; 0x03
+ 206:	12 82       	std	Z+2, r1	; 0x02
+ 208:	11 82       	std	Z+1, r1	; 0x01
+ 20a:	10 82       	st	Z, r1
+	/*Шаг №1*/
+	DHT_DDR|=(1<<DHT_BIT); // выход
+ 20c:	81 b3       	in	r24, 0x11	; 17
+ 20e:	82 60       	ori	r24, 0x02	; 2
+ 210:	81 bb       	out	0x11, r24	; 17
+	DHT_PORT&=~(1<<DHT_BIT); /*низкий уровень — подтягиваем линию-       разбудим датчик*/
+ 212:	82 b3       	in	r24, 0x12	; 18
+ 214:	8d 7f       	andi	r24, 0xFD	; 253
+ 216:	82 bb       	out	0x12, r24	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 218:	8b e4       	ldi	r24, 0x4B	; 75
+ 21a:	9d e1       	ldi	r25, 0x1D	; 29
+ 21c:	01 97       	sbiw	r24, 0x01	; 1
+ 21e:	f1 f7       	brne	.-4      	; 0x21c <__EEPROM_REGION_LENGTH__+0x1c>
+ 220:	00 c0       	rjmp	.+0      	; 0x222 <__EEPROM_REGION_LENGTH__+0x22>
+ 222:	00 00       	nop
+	_delay_ms (30); /*18 мс по условиям документации. В принципе в ходе экспериментов я ставил задержку 30 мс, то существенной разницы не почувствовал. */
+	DHT_PORT|=(1<<DHT_BIT); /*отпускаем линию*/
+ 224:	82 b3       	in	r24, 0x12	; 18
+ 226:	82 60       	ori	r24, 0x02	; 2
+ 228:	82 bb       	out	0x12, r24	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 22a:	9d e0       	ldi	r25, 0x0D	; 13
+ 22c:	9a 95       	dec	r25
+ 22e:	f1 f7       	brne	.-4      	; 0x22c <__EEPROM_REGION_LENGTH__+0x2c>
+ 230:	00 00       	nop
+	_delay_us (40); /*задержка по условию*/
+	/*Шаг №2*/
+	DHT_DDR&=~(1<<DHT_BIT); // вход
+ 232:	81 b3       	in	r24, 0x11	; 17
+ 234:	8d 7f       	andi	r24, 0xFD	; 253
+ 236:	81 bb       	out	0x11, r24	; 17
+	if (DHT_PIN&(1<<DHT_BIT)) //датчик должен ответить 0
+ 238:	81 99       	sbic	0x10, 1	; 16
+ 23a:	35 c0       	rjmp	.+106    	; 0x2a6 <__EEPROM_REGION_LENGTH__+0xa6>
+ 23c:	2a e1       	ldi	r18, 0x1A	; 26
+ 23e:	2a 95       	dec	r18
+ 240:	f1 f7       	brne	.-4      	; 0x23e <__EEPROM_REGION_LENGTH__+0x3e>
+ 242:	00 c0       	rjmp	.+0      	; 0x244 <__EEPROM_REGION_LENGTH__+0x44>
+	{ return 0; }
+	_delay_us (80); // задержка
+	if (!(DHT_PIN&(1<<DHT_BIT))) /*по истечению 80 мкс, датчик должен отпустить шину*/
+ 244:	81 9b       	sbis	0x10, 1	; 16
+ 246:	32 c0       	rjmp	.+100    	; 0x2ac <__EEPROM_REGION_LENGTH__+0xac>
+	{ return 0; }
+	/*Высокий сигнал на линии продлится также приблизительно 80 мкс*/
+
+	/*Шаг№3*/
+	while (DHT_PIN&(1<<DHT_BIT)); /* ждем пока контроллер датчика начнет передавать данные*/
+ 248:	81 99       	sbic	0x10, 1	; 16
+ 24a:	fe cf       	rjmp	.-4      	; 0x248 <__EEPROM_REGION_LENGTH__+0x48>
+ 24c:	60 e0       	ldi	r22, 0x00	; 0
+ 24e:	70 e0       	ldi	r23, 0x00	; 0
+	//передача начинается с нуля
+	for (j=0; j<5; j++)
+ 250:	65 30       	cpi	r22, 0x05	; 5
+ 252:	71 05       	cpc	r23, r1
+ 254:	70 f5       	brcc	.+92     	; 0x2b2 <__EEPROM_REGION_LENGTH__+0xb2>
+	{
+		datadht[j]=0;
+ 256:	fb 01       	movw	r30, r22
+ 258:	ea 59       	subi	r30, 0x9A	; 154
+ 25a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 25c:	10 82       	st	Z, r1
+		for (i=0; i<8; i++)
+ 25e:	80 e0       	ldi	r24, 0x00	; 0
+ 260:	90 e0       	ldi	r25, 0x00	; 0
+ 262:	88 30       	cpi	r24, 0x08	; 8
+ 264:	91 05       	cpc	r25, r1
+ 266:	e0 f4       	brcc	.+56     	; 0x2a0 <__EEPROM_REGION_LENGTH__+0xa0>
+		{
+			//cli (); // запрещаем прерывания
+			while (!(DHT_PIN&(1<<DHT_BIT)));   /* ждем когда датчик отпустит шину */
+ 268:	81 9b       	sbis	0x10, 1	; 16
+ 26a:	fe cf       	rjmp	.-4      	; 0x268 <__EEPROM_REGION_LENGTH__+0x68>
+ 26c:	2a e0       	ldi	r18, 0x0A	; 10
+ 26e:	2a 95       	dec	r18
+ 270:	f1 f7       	brne	.-4      	; 0x26e <__EEPROM_REGION_LENGTH__+0x6e>
+			_delay_us (30); /*задержка высокого уровня при 0 30 мкс*/
+			if (DHT_PIN&(1<<DHT_BIT)) /*если по истечению времени сигнал на линии высокий, значит передается 1*/
+ 272:	81 9b       	sbis	0x10, 1	; 16
+ 274:	11 c0       	rjmp	.+34     	; 0x298 <__EEPROM_REGION_LENGTH__+0x98>
+			datadht[j]|=1<<(7-i); /*тогда i-й бит устанавливаем 1*/
+ 276:	47 e0       	ldi	r20, 0x07	; 7
+ 278:	50 e0       	ldi	r21, 0x00	; 0
+ 27a:	48 1b       	sub	r20, r24
+ 27c:	59 0b       	sbc	r21, r25
+ 27e:	21 e0       	ldi	r18, 0x01	; 1
+ 280:	30 e0       	ldi	r19, 0x00	; 0
+ 282:	02 c0       	rjmp	.+4      	; 0x288 <__EEPROM_REGION_LENGTH__+0x88>
+ 284:	22 0f       	add	r18, r18
+ 286:	33 1f       	adc	r19, r19
+ 288:	4a 95       	dec	r20
+ 28a:	e2 f7       	brpl	.-8      	; 0x284 <__EEPROM_REGION_LENGTH__+0x84>
+ 28c:	fb 01       	movw	r30, r22
+ 28e:	ea 59       	subi	r30, 0x9A	; 154
+ 290:	ff 4f       	sbci	r31, 0xFF	; 255
+ 292:	30 81       	ld	r19, Z
+ 294:	23 2b       	or	r18, r19
+ 296:	20 83       	st	Z, r18
+			while (DHT_PIN&(1<<DHT_BIT));  // ждем окончание 1
+ 298:	81 99       	sbic	0x10, 1	; 16
+ 29a:	fe cf       	rjmp	.-4      	; 0x298 <__EEPROM_REGION_LENGTH__+0x98>
+	while (DHT_PIN&(1<<DHT_BIT)); /* ждем пока контроллер датчика начнет передавать данные*/
+	//передача начинается с нуля
+	for (j=0; j<5; j++)
+	{
+		datadht[j]=0;
+		for (i=0; i<8; i++)
+ 29c:	01 96       	adiw	r24, 0x01	; 1
+ 29e:	e1 cf       	rjmp	.-62     	; 0x262 <__EEPROM_REGION_LENGTH__+0x62>
+	/*Высокий сигнал на линии продлится также приблизительно 80 мкс*/
+
+	/*Шаг№3*/
+	while (DHT_PIN&(1<<DHT_BIT)); /* ждем пока контроллер датчика начнет передавать данные*/
+	//передача начинается с нуля
+	for (j=0; j<5; j++)
+ 2a0:	6f 5f       	subi	r22, 0xFF	; 255
+ 2a2:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2a4:	d5 cf       	rjmp	.-86     	; 0x250 <__EEPROM_REGION_LENGTH__+0x50>
+	DHT_PORT|=(1<<DHT_BIT); /*отпускаем линию*/
+	_delay_us (40); /*задержка по условию*/
+	/*Шаг №2*/
+	DHT_DDR&=~(1<<DHT_BIT); // вход
+	if (DHT_PIN&(1<<DHT_BIT)) //датчик должен ответить 0
+	{ return 0; }
+ 2a6:	80 e0       	ldi	r24, 0x00	; 0
+ 2a8:	90 e0       	ldi	r25, 0x00	; 0
+ 2aa:	08 95       	ret
+	_delay_us (80); // задержка
+	if (!(DHT_PIN&(1<<DHT_BIT))) /*по истечению 80 мкс, датчик должен отпустить шину*/
+	{ return 0; }
+ 2ac:	80 e0       	ldi	r24, 0x00	; 0
+ 2ae:	90 e0       	ldi	r25, 0x00	; 0
+ 2b0:	08 95       	ret
+			datadht[j]|=1<<(7-i); /*тогда i-й бит устанавливаем 1*/
+			while (DHT_PIN&(1<<DHT_BIT));  // ждем окончание 1
+			//sei ();// разрешаем общее прерывание
+		}
+	}
+	return 1;
+ 2b2:	81 e0       	ldi	r24, 0x01	; 1
+ 2b4:	90 e0       	ldi	r25, 0x00	; 0
+}
+ 2b6:	08 95       	ret
+
+000002b8 <main>:
+
+
+int main(void)
+{
+ 2b8:	cf 93       	push	r28
+ 2ba:	df 93       	push	r29
+ 2bc:	cd b7       	in	r28, 0x3d	; 61
+ 2be:	de b7       	in	r29, 0x3e	; 62
+ 2c0:	66 97       	sbiw	r28, 0x16	; 22
+ 2c2:	0f b6       	in	r0, 0x3f	; 63
+ 2c4:	f8 94       	cli
+ 2c6:	de bf       	out	0x3e, r29	; 62
+ 2c8:	0f be       	out	0x3f, r0	; 63
+ 2ca:	cd bf       	out	0x3d, r28	; 61
+	//DDRD = 0b11111111;
+	char buff[3];                    // Буфер для дисплея
+	
+	char data_dht11[5];
+	char text[17];
+	lcdInit();
+ 2cc:	0e 94 9a 00 	call	0x134	; 0x134 <_Z7lcdInitv>
+	lcdClear();
+ 2d0:	0e 94 c8 00 	call	0x190	; 0x190 <_Z8lcdClearv>
+	lcdSetCursor(LCD_CURSOR_OFF);
+ 2d4:	80 e0       	ldi	r24, 0x00	; 0
+ 2d6:	0e 94 bb 00 	call	0x176	; 0x176 <_Z12lcdSetCursorc>
+	lcdGotoXY(0, 0);		/* Enter column and row position */
+ 2da:	60 e0       	ldi	r22, 0x00	; 0
+ 2dc:	80 e0       	ldi	r24, 0x00	; 0
+ 2de:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <_Z9lcdGotoXYcc>
+	lcdPuts("H=");
+ 2e2:	80 e6       	ldi	r24, 0x60	; 96
+ 2e4:	90 e0       	ldi	r25, 0x00	; 0
+ 2e6:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+	lcdGotoXY(1,0);
+ 2ea:	60 e0       	ldi	r22, 0x00	; 0
+ 2ec:	81 e0       	ldi	r24, 0x01	; 1
+ 2ee:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <_Z9lcdGotoXYcc>
+	lcdPuts("T=");
+ 2f2:	83 e6       	ldi	r24, 0x63	; 99
+ 2f4:	90 e0       	ldi	r25, 0x00	; 0
+ 2f6:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 2fa:	2f e3       	ldi	r18, 0x3F	; 63
+ 2fc:	8d e0       	ldi	r24, 0x0D	; 13
+ 2fe:	93 e0       	ldi	r25, 0x03	; 3
+ 300:	21 50       	subi	r18, 0x01	; 1
+ 302:	80 40       	sbci	r24, 0x00	; 0
+ 304:	90 40       	sbci	r25, 0x00	; 0
+ 306:	e1 f7       	brne	.-8      	; 0x300 <main+0x48>
+ 308:	00 c0       	rjmp	.+0      	; 0x30a <main+0x52>
+ 30a:	00 00       	nop
+				
+				
+				
+				               _delay_ms (1000);
+				               //cli (); // запрещаем прерывания
+				               dhtread (); //опрос датчика
+ 30c:	0e 94 ff 00 	call	0x1fe	; 0x1fe <_Z7dhtreadv>
+				               //{ lcdClear();strcpy(text, "Error Checksum");
+					           //  lcdPuts(text);}
+				               /* Проверка контрольной суммы*/
+				               //else if (datadht[0] + datadht[1] + datadht[2] + datadht[3] == datadht[4])
+				               //{ /* Если сумма совпадает, то ок*/
+								   				lcdClear();
+ 310:	0e 94 c8 00 	call	0x190	; 0x190 <_Z8lcdClearv>
+								   				lcdGotoXY(0, 0);		/* Enter column and row position */
+ 314:	60 e0       	ldi	r22, 0x00	; 0
+ 316:	80 e0       	ldi	r24, 0x00	; 0
+ 318:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <_Z9lcdGotoXYcc>
+								   				lcdPuts("H=");
+ 31c:	80 e6       	ldi	r24, 0x60	; 96
+ 31e:	90 e0       	ldi	r25, 0x00	; 0
+ 320:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+								   				lcdGotoXY(1,0);
+ 324:	60 e0       	ldi	r22, 0x00	; 0
+ 326:	81 e0       	ldi	r24, 0x01	; 1
+ 328:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <_Z9lcdGotoXYcc>
+								   				lcdPuts("T=");
+ 32c:	83 e6       	ldi	r24, 0x63	; 99
+ 32e:	90 e0       	ldi	r25, 0x00	; 0
+ 330:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+																itoa(datadht[0],data_dht11,10);
+ 334:	06 e6       	ldi	r16, 0x66	; 102
+ 336:	10 e0       	ldi	r17, 0x00	; 0
+ 338:	f8 01       	movw	r30, r16
+ 33a:	80 81       	ld	r24, Z
+    } else if (__radix < 2 || __radix > 36) {
+	*__s = 0;
+	return __s;
+    } else {
+	extern char *__itoa_ncheck (int, char *, unsigned char);
+	return __itoa_ncheck (__val, __s, __radix);
+ 33c:	4a e0       	ldi	r20, 0x0A	; 10
+ 33e:	be 01       	movw	r22, r28
+ 340:	6f 5f       	subi	r22, 0xFF	; 255
+ 342:	7f 4f       	sbci	r23, 0xFF	; 255
+ 344:	08 2e       	mov	r0, r24
+ 346:	00 0c       	add	r0, r0
+ 348:	99 0b       	sbc	r25, r25
+ 34a:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <__itoa_ncheck>
+																lcdGotoXY(0,2);
+ 34e:	62 e0       	ldi	r22, 0x02	; 2
+ 350:	80 e0       	ldi	r24, 0x00	; 0
+ 352:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <_Z9lcdGotoXYcc>
+																lcdPuts(data_dht11);
+ 356:	ce 01       	movw	r24, r28
+ 358:	01 96       	adiw	r24, 0x01	; 1
+ 35a:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+																strcpy(text, "%");
+ 35e:	85 e2       	ldi	r24, 0x25	; 37
+ 360:	90 e0       	ldi	r25, 0x00	; 0
+ 362:	9f 83       	std	Y+7, r25	; 0x07
+ 364:	8e 83       	std	Y+6, r24	; 0x06
+																lcdPuts(text);
+ 366:	ce 01       	movw	r24, r28
+ 368:	06 96       	adiw	r24, 0x06	; 6
+ 36a:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+																itoa(datadht[2],data_dht11,10);
+ 36e:	f8 01       	movw	r30, r16
+ 370:	82 81       	ldd	r24, Z+2	; 0x02
+ 372:	4a e0       	ldi	r20, 0x0A	; 10
+ 374:	be 01       	movw	r22, r28
+ 376:	6f 5f       	subi	r22, 0xFF	; 255
+ 378:	7f 4f       	sbci	r23, 0xFF	; 255
+ 37a:	08 2e       	mov	r0, r24
+ 37c:	00 0c       	add	r0, r0
+ 37e:	99 0b       	sbc	r25, r25
+ 380:	0e 94 e0 01 	call	0x3c0	; 0x3c0 <__itoa_ncheck>
+																lcdGotoXY(1,2);
+ 384:	62 e0       	ldi	r22, 0x02	; 2
+ 386:	81 e0       	ldi	r24, 0x01	; 1
+ 388:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <_Z9lcdGotoXYcc>
+																lcdPuts(data_dht11);
+ 38c:	ce 01       	movw	r24, r28
+ 38e:	01 96       	adiw	r24, 0x01	; 1
+ 390:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+																lcdRawSendByte(0xDF,1 ); //Градус
+ 394:	61 e0       	ldi	r22, 0x01	; 1
+ 396:	8f ed       	ldi	r24, 0xDF	; 223
+ 398:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z14lcdRawSendBytecc>
+																strcpy(text, "C"); //Цельсия
+ 39c:	83 e4       	ldi	r24, 0x43	; 67
+ 39e:	90 e0       	ldi	r25, 0x00	; 0
+ 3a0:	9f 83       	std	Y+7, r25	; 0x07
+ 3a2:	8e 83       	std	Y+6, r24	; 0x06
+																lcdPuts(text);
+ 3a4:	ce 01       	movw	r24, r28
+ 3a6:	06 96       	adiw	r24, 0x06	; 6
+ 3a8:	0e 94 e5 00 	call	0x1ca	; 0x1ca <_Z7lcdPutsPc>
+ 3ac:	ff e7       	ldi	r31, 0x7F	; 127
+ 3ae:	2a e1       	ldi	r18, 0x1A	; 26
+ 3b0:	86 e0       	ldi	r24, 0x06	; 6
+ 3b2:	f1 50       	subi	r31, 0x01	; 1
+ 3b4:	20 40       	sbci	r18, 0x00	; 0
+ 3b6:	80 40       	sbci	r24, 0x00	; 0
+ 3b8:	e1 f7       	brne	.-8      	; 0x3b2 <main+0xfa>
+ 3ba:	00 c0       	rjmp	.+0      	; 0x3bc <main+0x104>
+ 3bc:	00 00       	nop
+ 3be:	9d cf       	rjmp	.-198    	; 0x2fa <main+0x42>
+
+000003c0 <__itoa_ncheck>:
+ 3c0:	bb 27       	eor	r27, r27
+ 3c2:	4a 30       	cpi	r20, 0x0A	; 10
+ 3c4:	31 f4       	brne	.+12     	; 0x3d2 <__itoa_ncheck+0x12>
+ 3c6:	99 23       	and	r25, r25
+ 3c8:	22 f4       	brpl	.+8      	; 0x3d2 <__itoa_ncheck+0x12>
+ 3ca:	bd e2       	ldi	r27, 0x2D	; 45
+ 3cc:	90 95       	com	r25
+ 3ce:	81 95       	neg	r24
+ 3d0:	9f 4f       	sbci	r25, 0xFF	; 255
+ 3d2:	0c 94 ec 01 	jmp	0x3d8	; 0x3d8 <__utoa_common>
+
+000003d6 <__utoa_ncheck>:
+ 3d6:	bb 27       	eor	r27, r27
+
+000003d8 <__utoa_common>:
+ 3d8:	fb 01       	movw	r30, r22
+ 3da:	55 27       	eor	r21, r21
+ 3dc:	aa 27       	eor	r26, r26
+ 3de:	88 0f       	add	r24, r24
+ 3e0:	99 1f       	adc	r25, r25
+ 3e2:	aa 1f       	adc	r26, r26
+ 3e4:	a4 17       	cp	r26, r20
+ 3e6:	10 f0       	brcs	.+4      	; 0x3ec <__utoa_common+0x14>
+ 3e8:	a4 1b       	sub	r26, r20
+ 3ea:	83 95       	inc	r24
+ 3ec:	50 51       	subi	r21, 0x10	; 16
+ 3ee:	b9 f7       	brne	.-18     	; 0x3de <__utoa_common+0x6>
+ 3f0:	a0 5d       	subi	r26, 0xD0	; 208
+ 3f2:	aa 33       	cpi	r26, 0x3A	; 58
+ 3f4:	08 f0       	brcs	.+2      	; 0x3f8 <__utoa_common+0x20>
+ 3f6:	a9 5d       	subi	r26, 0xD9	; 217
+ 3f8:	a1 93       	st	Z+, r26
+ 3fa:	00 97       	sbiw	r24, 0x00	; 0
+ 3fc:	79 f7       	brne	.-34     	; 0x3dc <__utoa_common+0x4>
+ 3fe:	b1 11       	cpse	r27, r1
+ 400:	b1 93       	st	Z+, r27
+ 402:	11 92       	st	Z+, r1
+ 404:	cb 01       	movw	r24, r22
+ 406:	0c 94 05 02 	jmp	0x40a	; 0x40a <strrev>
+
+0000040a <strrev>:
+ 40a:	dc 01       	movw	r26, r24
+ 40c:	fc 01       	movw	r30, r24
+ 40e:	67 2f       	mov	r22, r23
+ 410:	71 91       	ld	r23, Z+
+ 412:	77 23       	and	r23, r23
+ 414:	e1 f7       	brne	.-8      	; 0x40e <strrev+0x4>
+ 416:	32 97       	sbiw	r30, 0x02	; 2
+ 418:	04 c0       	rjmp	.+8      	; 0x422 <strrev+0x18>
+ 41a:	7c 91       	ld	r23, X
+ 41c:	6d 93       	st	X+, r22
+ 41e:	70 83       	st	Z, r23
+ 420:	62 91       	ld	r22, -Z
+ 422:	ae 17       	cp	r26, r30
+ 424:	bf 07       	cpc	r27, r31
+ 426:	c8 f3       	brcs	.-14     	; 0x41a <strrev+0x10>
+ 428:	08 95       	ret
+
+0000042a <_exit>:
+ 42a:	f8 94       	cli
+
+0000042c <__stop_program>:
+ 42c:	ff cf       	rjmp	.-2      	; 0x42c <__stop_program>

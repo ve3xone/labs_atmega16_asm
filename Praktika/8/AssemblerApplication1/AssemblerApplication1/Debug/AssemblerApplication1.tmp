@@ -1,0 +1,56 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\Debug\AssemblerApplication1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AssemblerApplication1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AssemblerApplication1.map</FILE>
+  <FILE>AssemblerApplication1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <settings><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>26</LINE></settings>
+  <TWSI><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>511</LINE></TWSI>
+  <write><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>493</LINE></write>
+  <delay><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>604</LINE></delay>
+  <Write_CHOOSE><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>115</LINE></Write_CHOOSE>
+  <writeLCD><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>478</LINE></writeLCD>
+  <a><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>191</LINE></a>
+  <set_HL1><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>271</LINE></set_HL1>
+  <set_HL2><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>282</LINE></set_HL2>
+  <back><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>221</LINE></back>
+  <prewrite_CEHL1><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>215</LINE></prewrite_CEHL1>
+  <write_CEHL1><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>293</LINE></write_CEHL1>
+  <prewrite_CEHL2><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>218</LINE></prewrite_CEHL2>
+  <write_CEHL2><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>384</LINE></write_CEHL2>
+  <HL1_HL2><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>229</LINE></HL1_HL2>
+  <fire_HL1><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>257</LINE></fire_HL1>
+  <next><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>232</LINE></next>
+  <fire_HL2><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>264</LINE></fire_HL2>
+  <next1><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>235</LINE></next1>
+  <preWrite_CHOOSE><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>242</LINE></preWrite_CHOOSE>
+  <TWI_start><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>565</LINE></TWI_start>
+  <SLAW_Adr><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>555</LINE></SLAW_Adr>
+  <ByteTrasmit><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>545</LINE></ByteTrasmit>
+  <TWI_Stop><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>575</LINE></TWI_Stop>
+  <Vix><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>537</LINE></Vix>
+  <TWI_SendByte><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>585</LINE></TWI_SendByte>
+  <delay_40mks><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>599</LINE></delay_40mks>
+  <pdelay><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>614</LINE></pdelay>
+  <delay_250ms><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>609</LINE></delay_250ms>
+  <pdelay2><FILE>C:\Users\ve3xone\Desktop\Projects\ASMProject_ATMega16_Praktika\8\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>617</LINE></pdelay2>
+ </LABELS>
+</ASSEMBLER_INFO>
